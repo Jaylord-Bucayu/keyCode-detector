@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Random Number</title>
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: content-box;
+		}
+		input:focus{
+			outline: none;
+		}
+		body{
+			background: #041C32;
+		}
+	</style>
+</head>
+<body>
+
+	<div style="width: 100%;height: 100vh;">
+		<div style="width: 100%;height: 100vh;display: flex;justify-content: center;align-items: center;">
+			<div style="background-color: white;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;max-width: 500px;width: 80%;height: 65vh;max-height: 500px;border-radius: 10px;">
+				<div style="width: 100%;height: 80%;display: flex;align-items: center;justify-content: center;">
+					<p id="keyCode" style="font-size: 150px;font-family: 'Varela Round', sans-serif;border: 6px solid #172b4c;border-radius: 50%;padding: 5px;"></p>
+				</div>
+
+				<div style="display: flex;border-top: 1px solid #212121;">
+					<div style="width: 100%;height: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
+					<span>Key</span>
+					<p id="key" style="font-size: 40px;font-family: 'Varela Round', sans-serif;"></p>
+				</div>
+
+				<div style="width: 100%;height: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
+					<span>Key code</span>
+					<p id="code" style="font-size: 40px;font-family: 'Varela Round', sans-serif;"></p>
+				</div>
+				</div>
+				
+
+			</div>
+		</div>
+		
+	</div>
+
+<script type="text/javascript">
+	const key = document.querySelector('#key');
+	const keyCode = document.querySelector('#keyCode');
+	const code= document.querySelector('#code');
+	document.addEventListener('keydown',function(e){
+	
+			
+		key.innerText = e.key.toUpperCase();
+		keyCode.innerText = e.keyCode;
+		code.innerText = e.code.toUpperCase();
+
+		});
+</script>
+
+</body>
+</html>
